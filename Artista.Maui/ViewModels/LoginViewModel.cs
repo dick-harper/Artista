@@ -8,7 +8,7 @@ namespace Artista.Maui.ViewModels
         private Guid _id;
 
         [ObservableProperty]
-        private string _loginId;
+        private string _loginName;
 
         [ObservableProperty]
         private string _password;
