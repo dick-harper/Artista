@@ -1,33 +1,32 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace Artista.Maui.ViewModels
 {
     public partial class LoginViewModel : ObservableObject
     {
         [ObservableProperty]
-        private Guid _id;
-
-        [ObservableProperty]
-        private string _loginName;
+        private string _loginId;
 
         [ObservableProperty]
         private string _password;
+        
+        [RelayCommand]
+        void Login()
+        {
 
-        [ObservableProperty]
-        private bool _isActive;
+        }
 
-        [ObservableProperty]
-        private string _firstName;
+        [RelayCommand]
+        void ForgotLoginIdOrPassword()
+        {
 
-        [ObservableProperty]
-        private string _lastName;
+        }
 
-        [ObservableProperty]
-        private string _email;
+        [RelayCommand]
+        void RegisterNewUser()
+        {
 
-        public DateTime DateOfBirth { get; set; }
-
-        [ObservableProperty]
-        private string _phone;        
+        }
     }
 }
