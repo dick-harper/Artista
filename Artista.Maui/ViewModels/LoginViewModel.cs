@@ -10,7 +10,7 @@ namespace Artista.Maui.ViewModels
 
         [ObservableProperty]
         private string _password;
-        
+
         [RelayCommand]
         void Login()
         {
@@ -25,6 +25,12 @@ namespace Artista.Maui.ViewModels
 
         [RelayCommand]
         void RegisterNewUser()
+        {
+
+        }
+
+        [RelayCommand]
+        void Tap()
         {
 
         }
