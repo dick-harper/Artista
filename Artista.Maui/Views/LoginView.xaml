@@ -8,8 +8,8 @@
 
     <VerticalStackLayout Padding="20">
         <Image
-                Source="modern-art-painting-red-art-orange-acrylic-paint-1565561-pxhere.com.jpg"
-                SemanticProperties.Description="Modern Art"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
         <Label Padding="20"
