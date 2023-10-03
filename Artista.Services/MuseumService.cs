@@ -1,6 +1,9 @@
 ﻿using Artista.Models;
 using Artista.Services.Interfaces;
 using Newtonsoft.Json;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Artista.Services
 {
@@ -17,11 +20,13 @@ namespace Artista.Services
         {
             var path = $"public/collection/v1/objects/{objectId}";
 
-            using HttpResponseMessage response = await _httpClient.GetAsync(path);
-            response.EnsureSuccessStatusCode();
-            string responseBody = await response.Content.ReadAsStringAsync();
-            var artModel = JsonConvert.DeserializeObject<ArtModel>(responseBody);
-            return artModel;
+            using (var response = await _httpClient.GetAsync(path))
+            {
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+                var artModel = JsonConvert.DeserializeObject<ArtModel>(responseBody);
+                return artModel;
+            }            
         }
     }
 }

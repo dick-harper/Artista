@@ -1,4 +1,5 @@
 ﻿using Artista.Models;
+using System.Threading.Tasks;
 
 namespace Artista.Services.Interfaces
 {
