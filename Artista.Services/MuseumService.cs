@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Artista.Services
 {
-    internal class MuseumService : IMuseumService
+    public class MuseumService : IMuseumService
     {
         private static readonly HttpClient _httpClient = new HttpClient();
 

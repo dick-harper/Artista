@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Artista.Services.Interfaces;
+using Artista.Xam.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +13,18 @@ namespace Artista.Xam
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            var serviceCollection = new ServiceCollection();
+
+            RegisterServices(serviceCollection);
+
+            RegisterViewModels(serviceCollection);
+
+            ServiceProvider = serviceCollection.BuildServiceProvider();
+
+            MainPage = ServiceProvider.GetRequiredService<MainPage>();
         }
+
+        public IServiceProvider ServiceProvider { get; private set; }
 
         protected override void OnStart()
         {
@@ -23,6 +36,17 @@ namespace Artista.Xam
 
         protected override void OnResume()
         {
+        }
+
+        private void RegisterServices(IServiceCollection services)
+        {
+            services.AddSingleton<IMuseumService, Services.MuseumService>();
+        }
+
+        private void RegisterViewModels(IServiceCollection services)
+        {
+            services.AddTransient<MainPage>();
+            services.AddTransient<SearchViewModel>();
         }
     }
 }
