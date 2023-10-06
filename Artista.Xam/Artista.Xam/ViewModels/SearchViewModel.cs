@@ -17,7 +17,7 @@ namespace Artista.Xam.ViewModels
         }
 
         [ObservableProperty]
-        private ArtModel _artModel;
+        private ArtWork _artModel;
         
 
         [RelayCommand]

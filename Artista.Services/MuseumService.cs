@@ -16,16 +16,24 @@ namespace Artista.Services
             _httpClient.BaseAddress = new Uri("https://collectionapi.metmuseum.org");
         }
 
-        public async Task<ArtModel> Get(int objectId)
+        public async Task<ArtWork> GetAsync(int objectId)
         {
             var path = $"public/collection/v1/objects/{objectId}";
 
             using (var response = await _httpClient.GetAsync(path))
             {
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-                var artModel = JsonConvert.DeserializeObject<ArtModel>(responseBody);
-                return artModel;
+                try
+                {
+                    response.EnsureSuccessStatusCode();
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    var artModel = JsonConvert.DeserializeObject<ArtWork>(responseBody);
+                    return artModel;
+                }catch (Exception ex)
+                {
+                    var msg = ex.Message;
+                }
+
+                return null;
             }            
         }
     }

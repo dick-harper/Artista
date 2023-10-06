@@ -45,8 +45,10 @@ namespace Artista.Xam
 
         private void RegisterViewModels(IServiceCollection services)
         {
-            services.AddTransient<MainPage>();
+            services.AddTransient<MainPageViewModel>();            
             services.AddTransient<SearchViewModel>();
+            services.AddTransient<HeaderViewModel>();
+            services.AddTransient<MainPage>();
         }
     }
 }

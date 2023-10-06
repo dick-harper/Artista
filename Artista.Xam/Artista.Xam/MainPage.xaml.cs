@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Artista.Xam.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 using Xamarin.Forms;
 
 namespace Artista.Xam
@@ -13,6 +9,8 @@ namespace Artista.Xam
         public MainPage()
         {
             InitializeComponent();
+
+            BindingContext = ((App)Application.Current).ServiceProvider.GetService<MainPageViewModel>();
         }
     }
 }
