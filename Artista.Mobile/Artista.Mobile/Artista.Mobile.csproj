@@ -13,11 +13,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="images\cogwheel.png" />
 	  <None Remove="images\starry-night.png" />
 	  <None Remove="refresh.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Include="images\cogwheel.png" />
 	  <EmbeddedResource Include="images\refresh.png" />
 	  <EmbeddedResource Include="images\starry-night.png" />
 	</ItemGroup>
@@ -37,6 +39,9 @@
 
 	<ItemGroup>
 		<EmbeddedResource Update="Pages\SearchPage.xaml">
+		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\FooterView.xaml">
 		  <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Views\HeaderView.xaml">

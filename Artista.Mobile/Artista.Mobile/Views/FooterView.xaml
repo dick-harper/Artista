@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Artista.Mobile.Views.FooterView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+        <Grid Padding="4,4,4,4" BackgroundColor="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout
+                Grid.Column="0"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <Label
+                    FontSize="Small"
+                    HorizontalOptions="StartAndExpand"
+                    Text="The Metropolitan Museum of Art"
+                    TextColor="WhiteSmoke" />
+            </StackLayout>
+            <StackLayout
+                Grid.Column="1"
+                HorizontalOptions="EndAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <Label
+                    FontSize="Small"
+                    Text="10/8/2023"
+                    TextColor="WhiteSmoke" />
+            </StackLayout>
+        </Grid>
+        <!--<StackLayout BackgroundColor="DimGray" VerticalOptions="Center">
+            <StackLayout
+                Background="Red"
+                HorizontalOptions="Start"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <Label
+                    FontSize="Small"
+                    Text="The Metropolitan Museum of Art"
+                    TextColor="WhiteSmoke" />
+            </StackLayout>
+            <StackLayout
+                Background="blue"
+                HorizontalOptions="End"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <Label
+                    FontSize="Small"
+                    Text="10/8/2023"
+                    TextColor="WhiteSmoke" />
+            </StackLayout>
+        </StackLayout>-->
+    </ContentView.Content>
+</ContentView>

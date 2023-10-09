@@ -1,14 +1,48 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Artista.Mobile"
-             x:Class="Artista.Mobile.Views.HeaderView">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="Artista.Mobile.Views.HeaderView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Artista.Mobile">
     <ContentView.Content>
-        <StackLayout>
-            <Label Text="Welcome to {Binding Title}!" />
-            <Image
-                Source="{local:ImageResource Artista.Mobile.images.starry-night.png}"/>
-        </StackLayout>
+        <Grid BackgroundColor="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout
+                Grid.Column="0"
+                HorizontalOptions="StartAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="CenterAndExpand">
+                <Image Margin="0,0,0,0" Source="{local:ImageResource Artista.Mobile.images.starry-night.png}" />
+            </StackLayout>
+            <StackLayout
+                Grid.Column="1"
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <Label
+                    FontSize="Large"
+                    Text="{Binding AppName}"
+                    TextColor="WhiteSmoke" />
+                <Label
+                    Margin="0,0,0,0"
+                    Padding="0,9,0,0"
+                    FontSize="Small"
+                    Text="{Binding Version}"
+                    TextColor="WhiteSmoke" />
+            </StackLayout>
+            <StackLayout
+                Grid.Column="2"
+                HorizontalOptions="EndAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="CenterAndExpand">
+                <Image Margin="0,0,0,0" Source="{local:ImageResource Artista.Mobile.images.cogwheel.png}" />
+            </StackLayout>
+        </Grid>
+
 
     </ContentView.Content>
 </ContentView>

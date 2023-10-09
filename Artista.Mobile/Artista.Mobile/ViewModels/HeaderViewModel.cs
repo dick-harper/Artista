@@ -7,12 +7,19 @@ namespace Artista.Mobile.ViewModels
 {
     public partial class HeaderViewModel : ObservableObject
     {
-        [ObservableProperty]
-        private string _title;
-
         public HeaderViewModel()
         {
-            Title = "Artista";
+            AppName = "Artista";
+            Version = "0.0.1";
         }
+
+        [ObservableProperty]       
+        private string _version;
+
+        [ObservableProperty]       
+        private string _AppName;
+
+       
+            
     }
 }
