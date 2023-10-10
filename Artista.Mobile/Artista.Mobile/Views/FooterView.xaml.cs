@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Artista.Mobile.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace Artista.Mobile.Views
 		public FooterView ()
 		{
 			InitializeComponent ();
-		}
+
+            BindingContext = ((App)Application.Current).ServiceProvider.GetService<FooterViewModel>();
+        }
 	}
 }

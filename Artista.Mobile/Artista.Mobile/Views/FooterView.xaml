@@ -16,7 +16,7 @@
                 <Label
                     FontSize="Small"
                     HorizontalOptions="StartAndExpand"
-                    Text="The Metropolitan Museum of Art"
+                    Text="{Binding MuseumName}"
                     TextColor="WhiteSmoke" />
             </StackLayout>
             <StackLayout
@@ -26,7 +26,7 @@
                 VerticalOptions="Center">
                 <Label
                     FontSize="Small"
-                    Text="10/8/2023"
+                    Text="{Binding CurrentDate}"
                     TextColor="WhiteSmoke" />
             </StackLayout>
         </Grid>

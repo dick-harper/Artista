@@ -48,6 +48,7 @@ namespace Artista.Mobile
             services.AddTransient<MainPageViewModel>();            
             services.AddTransient<SearchViewModel>();
             services.AddTransient<HeaderViewModel>();
+            services.AddTransient<FooterViewModel>();
             services.AddTransient<MainPage>();
         }
     }

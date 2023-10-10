@@ -6,13 +6,32 @@
     xmlns:local="clr-namespace:Artista.Mobile"
     xmlns:vm="clr-namespace:Artista.Mobile.ViewModels"
     xmlns:vw="clr-namespace:Artista.Mobile.Views">
-    <StackLayout Padding="4,4,4,4" BackgroundColor="Black">
-        <!--<Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">-->
+    <Grid
+        Margin="0"
+        Padding="8,0,8,0"
+        BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <vw:HeaderView Grid.Row="0" />
+        <vw:FooterView Grid.Row="2" />
+    </Grid>
+    <!--<StackLayout Padding="4,4,4,4" BackgroundColor="Black">
+    -->
+    <!--<Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">-->
+    <!--
         <vw:HeaderView />
-        <!--<Label Text="{Binding Title}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>-->
-        <!--</Frame>-->
-        <!--<Label Text="View amazing works of art." FontSize="Title" Padding="30,10,30,10"/>
+    -->
+    <!--<Label Text="{Binding Title}" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>-->
+    <!--</Frame>-->
+    <!--<Label Text="View amazing works of art." FontSize="Title" Padding="30,10,30,10"/>
         <Label Text="Discover treasured art collections located in museums from around the world." FontSize="16" Padding="30,10,30,10"/>-->
+    <!--
         <Image Source="{Binding MainArtWork.PrimaryImageSmall}" />
         <ImageButton
             BackgroundColor="White"
@@ -21,6 +40,6 @@
             Source="{local:ImageResource Artista.Mobile.images.refresh.png}" />
         <Button Command="{Binding SearchCommand}" Text="Search" />
         <vw:FooterView />
-    </StackLayout>
+    </StackLayout>-->
 
 </ContentPage>
